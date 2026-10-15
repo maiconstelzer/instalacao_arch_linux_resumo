@@ -30,12 +30,6 @@ KEYMAP=us
 FONT=ter-112n
 FONT_MAP=8859-2
 
-# Rede (interface enp1s0) (rede.sh)
-ip link set enp1s0 up
-ip address add local 192.168.1.16/24 broadcast 255.255.255.0 dev enp1s0
-ip route del 192.168.1.0/24
-ip route add default via 192.168.1.1
-
 # Usuario
 useradd -m -G wheel mds
 passwd mds
